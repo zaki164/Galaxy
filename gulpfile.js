@@ -36,15 +36,21 @@ function js() {
     .pipe(gulp.dest('build/js'))
     .pipe(livereload())
 }
-gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
+// function deploy() {
+//   return gulp
+//     .src('./build/**/*')
+//     .pipe(ghPages());
+// };
+// gulp.task('deploy', function() {
+//   return gulp
+//     .src('./build/**/*')
+//     .pipe(ghPages());
+// });
 
 exports.default = function () {
   require("./server.js");
   livereload.listen();
-
+  // deploy();
   gulp.watch( ["src/pug/**/*.pug"]  ,  html );
   gulp.watch( ["src/sass/**/*.scss"]  ,  css );
   gulp.watch( ["src/js/*.js"]  ,  js );
