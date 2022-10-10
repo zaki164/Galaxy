@@ -1,0 +1,18 @@
+.readmore {
+  display: inline-block;
+  color: $textcolor;
+  background-color: $maincolor;
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: .3s;
+  text-align: center;
+  svg {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba($maincolor, 0.5);
+    color: $maincolor;
+    background-color: $textcolor;
+  }
+}

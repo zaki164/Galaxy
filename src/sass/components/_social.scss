@@ -1,0 +1,26 @@
+.social {
+  gap: 20px;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+  li a {
+    color: $textcolor;
+    padding: 5px;
+    svg {
+      transition: .3s;
+    }
+    &:hover {
+      svg.fa-twitter {
+        color: #1da1f2;
+      }
+      svg.fa-facebook-f {
+        color: #1877f2;
+      }
+      svg.fa-instagram {
+        color: #dd5143;
+      }
+      svg.fa-linkedin-in {
+        color: #0077b5;
+      }
+    }
+  }
+}

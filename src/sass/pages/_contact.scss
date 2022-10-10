@@ -1,0 +1,60 @@
+.contact-content {
+  width: 100%;
+  padding: 80px 0;
+  @include media('sm') {
+    padding: 150px 0;
+  }
+  .container {
+    .content {
+      width: 80%;
+      @include media('md') {
+        margin: auto;
+      }
+      .contact-us {
+        background-color: #1D1C21;
+        margin-top: 40px;
+        padding: 60px 40px;
+        h2 {
+          font-size: 38px;
+          font-weight: 400;
+          color: $textcolor;
+          margin-bottom: 60px;
+        }
+        form {
+          .forma {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 60px;
+            label {
+              color: $textcolor;
+              margin-bottom: 7px;
+              display: block;
+            }
+            input,
+            textarea,
+            select {
+              width: 100%;
+              background: none;
+              border: none;
+              border-bottom: 1px solid #777;
+              padding: 10px 0;
+              caret-color: #777;
+              color: #777;
+              transition: .3s;
+              resize: none;
+              &:focus {
+                outline: none;
+                border-color: $textcolor;
+              }
+            }
+            option {
+              background-color: #1D1C21;
+              color: $textcolor;
+              border-radius: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

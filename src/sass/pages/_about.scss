@@ -1,0 +1,72 @@
+.main-content {
+  width: 100%;
+  padding: 80px 0;
+  @include media('sm') {
+    padding: 150px 0;
+  }
+  .container {
+    .content {
+      width: 80%;
+      @include media('md') {
+        margin: auto;
+      }
+      img {
+        max-width: 100%;
+        margin: 30px 0;
+      }
+      h2 {
+        color: $textcolor;
+        font-size: 38px;
+        font-weight: bold;
+        line-height: 1.7;
+      }
+      .text {
+        color: #888;
+        line-height: 1.7;
+        margin: 25px 0;
+      }
+      h3 {
+        color: $textcolor;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.7;
+        margin: 25px 0;
+      }
+      .advices {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        > li {
+          padding: 10px 0;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: -30px;
+            top: 20px;
+            border-radius: 50%;
+            background-color: $maincolor
+          }
+          h4 {
+            color: $textcolor;
+          }
+          p {
+            color: #888;
+            line-height: 1.7;
+            margin: 15px 0 0;
+          }
+          ol {
+            margin-top: 15px;
+            padding-left: 20px;
+            li {
+              padding: 10px 0;
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+  }
+}

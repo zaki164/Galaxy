@@ -1,0 +1,27 @@
+mixin readmore($text)
+  a(href="#" class="readmore")
+    | #{$text}
+    i.fa-solid.fa-arrow-right-long 
+
+
+mixin inform($imgscr, $p, $sm)
+  .inform
+    img(src=$imgscr, alt="image")
+    a(href="#" class="title") 
+      if $sm == 'small'
+        | Excepteur ado Do minimal duis laborum Fugiat ea
+      else
+        | Id reprehrenderit mollit in tempor naid incididunt cupidatat consectetura
+    include ../components/time
+    if $p == 'true'
+      p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt leo mi, viverra urna. Arcu velit risus, condimentum ut vulputate cursus porttitor turpis in. Diam egestas nec massa, habitasse. Tincidt dui.
+    +readmore('Read More')
+
+mixin footercolumn(foothead)
+  .col-sm-12.col-md-6.col-lg-3 
+    ul.info 
+      li: a(href="#")= foothead 
+      li: a(href="#") Privacy State 
+      li: a(href="#") Privacy  
+      li: a(href="#") State 
+      li: a(href="#") Privacy

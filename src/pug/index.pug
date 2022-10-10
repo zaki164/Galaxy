@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/all.min.css")
+    link(rel="stylesheet", href="css/main.css")
+    include helpers/font
+    title Galaxy
+  body
+    include helpers/mixins 
+    include components/sidebar
+    include components/navbar
+    block pagecontent
+      .holder
+        .container
+          .row
+            .col-12.col-lg-8
+              .home-content.mb-5.mb-lg-0
+                .content
+                  +inform('images/post/post-lg/01.png', 'true')
+                  +inform('images/post/post-lg/02.png', 'true')
+                  +inform('images/post/post-lg/03.png', 'true')
+            .col-12.col-lg-4
+              .about
+                .content
+                  .aboutme
+                    img(src="images/author-sm.png", alt="image")
+                    h2.mainheader About Me
+                    p Lorem ipsum dolor sit coectetur adiing elit. Tincidunfywjt leo mi, viearra urna. Arcu ve isus, condimentum ut vulpate cursus por turpis.
+                    include components/social.pug
+                  .subscribe 
+                    h2.mainheader Subscribe Blog
+                    p Lorem ipsum dolor sit coectetur elit. Tincidu nfywjt leo mi, urna. Arcu ve isus, condimentum ut vulpate cursus por.
+                    input(type="email" name="email" placeholder="Your Email Address")
+                    +readmore('Subscribe Now')
+                  +inform('images/post/post-sm/01.png', 'false', 'small')
+                  +inform('images/post/post-sm/02.png', 'false', 'small')
+    include components/footer
+    script(src="js/bootstrap.bundle.min.js")
+    script(src="js/all.min.js")
+    script(src="js/main.js")

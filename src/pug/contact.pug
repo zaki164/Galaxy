@@ -1,0 +1,37 @@
+extends index
+
+block pagecontent 
+  .contact-content 
+    .container
+      .content
+        include components/search
+        .contact-us
+          h2 Lets Contact Us
+          form(action="")
+            .row 
+              .col-12.col-md-6
+                .forma
+                  label(for="fname") Your First Name
+                  input(type="text" id="fname" name="fname" placeholder="Zaki Mohsen" required) 
+              .col-12.col-md-6
+                .forma 
+                  label(for="lname") Your Last Name
+                  input(type="text" id="lname" name="lname" placeholder="Seliem" required) 
+              .col-12.col-md-6
+                .forma 
+                  label(for="email") E-Mail Address
+                  input(type="email" id="email" name="email" placeholder="zaki.mohsen@mail.com" required) 
+              .col-12.col-md-6
+                .forma 
+                  label(for="purpose") What Is This About?
+                  select(name="purpose" id="purpose")
+                    option(value="personal purpose") personal purpose
+                    option(value="business purpose") business purpose
+                    option(value="Want to say hello") Want to say hello
+              .col-12
+                .forma.mb-5
+                  label(for="message") Your Message
+                  textarea(name="message" id="message" cols="30" rows="3" placeholder="Hello this is your message")
+            button(type="submit" class="readmore border border-0 mt-0")
+              | Send Now
+              i.fa-solid.fa-arrow-right-long

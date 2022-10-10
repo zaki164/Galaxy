@@ -1,0 +1,56 @@
+.sidebar {
+  width: 25vw;
+  padding: 50px;
+  padding-top: 80px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: .7s;
+  .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    .nav {
+      flex-direction: column;
+      gap: 15px;
+      li a {
+        display: inline-block;
+        margin-bottom: 15px;
+        padding-left: 0;
+        color: $textcolor;
+        transition: .3s;
+        position: relative;
+        letter-spacing: -1px;
+        font-weight: 700;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: $maincolor;
+            transition: .3s;
+          }
+        &:hover,
+        &.active {
+          color: rgba($textcolor, .5);
+          &::before {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  @include media('sm') {
+    left: -100%;
+    &.open {
+      left: 0;
+      background-color: #1e1c20;
+      width: 245px;
+      z-index: 20;
+      box-shadow: 2px 0 5px $maincolor;
+    }
+  }
+}

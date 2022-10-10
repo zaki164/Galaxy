@@ -1,0 +1,42 @@
+.mynav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 0 20px;
+  z-index: 19;
+  transition: .3s;
+  @include media('sm') {
+    display: block;
+    &.scroll {
+      background-color: $backgroundcolor;
+      box-shadow: 0 0 10px $maincolor,
+      0 0 20px $maincolor,
+      0 0 30px $maincolor,
+      0 0 40px $maincolor;
+    }
+  }
+  .container {
+    .hold {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      .logo {
+        img {
+          width: 80px;
+        }
+      }
+      .mytoggle {
+        font-size: 30px;
+        color: $textcolor;
+        cursor: pointer;
+        transition: .7s;
+        &:hover {
+          color: $maincolor;
+        }
+      }
+    }
+  }
+}
